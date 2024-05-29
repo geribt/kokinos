@@ -1,0 +1,64 @@
+---
+import Base from "../layouts/Base.astro"
+import Llibre from "../components/Llibre.astro";
+
+const llibres = [
+	{
+		id: 1,
+		titol: "Zozó Dormilon",
+		autor: "Bruno Douin",
+		imatge: "zozo_dormilon.jpg"
+	},
+
+	{
+		id: 2,
+		titol: "Zozó Dormilon",
+		autor: "Bruno Douin",
+		imatge: "zozo_dormilon.jpg"
+	},
+	{
+		id: 3,
+		titol: "Zozó Dormilon",
+		autor: "Bruno Douin",
+		imatge: "zozo_dormilon.jpg"
+	},
+	{
+		id: 4,
+		titol: "Zozó Dormilon",
+		autor: "Bruno Douin",
+		imatge: "zozo_dormilon.jpg"
+	}
+]
+---
+
+<Base>
+	<style>
+		h1{
+			color:red;
+		}
+		ul{
+			margin-left: -38px;
+		}
+		li{
+			display: inline;
+			color:#50bada;
+			text-decoration: none;
+		}
+	</style>
+	<h1>CATÁLOGO</h1>
+	<ul>
+		<li>
+			<a href="./index.astro">AUTORES</a>
+
+		</li>
+		<li>
+			<a href="./index.astro">COLECCIÓN</a>
+		</li>
+		<li>
+			<a href="./index.astro">TODOS</a>
+		</li>
+	</ul>
+	{
+		llibres.map(llibre => <Llibre titol={llibre.titol} autor={llibre.autor} imatge={llibre.imatge}/>)
+	}
+</Base>

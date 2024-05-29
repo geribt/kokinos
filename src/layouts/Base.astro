@@ -1,0 +1,39 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+        <style>
+            body{
+                font-family: sans-serif;
+            }
+            .topbanner{
+            background: transparent url(../../public/img/top.png) no-repeat;
+            background-size: cover;
+            }
+            .header{
+                vertical-align: middle;
+                text-align: center;
+            }
+            .header img{
+                width: 270px;
+            }
+
+        </style>
+	</head>
+	<body>
+        <div class="topbanner">
+
+        </div>
+        <div class="header">
+            <img src="../../public/img/logo.svg"/>
+        </div>
+        <slot/>
+	</body>
+</html>
